@@ -1,0 +1,115 @@
+/* Login Page */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--light);
+}
+
+.login-left {
+    flex: 1;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-right {
+    flex: 1;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    padding: 40px;
+}
+
+.login-logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.login-form p {
+    color: var(--secondary);
+    margin-bottom: 24px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.forgot-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 12px;
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-login:hover {
+    background-color: var(--primary-dark);
+}
+
+.login-divider {
+    width: 100%;
+    max-width: 400px;
+    height: 1px;
+    background-color: var(--gray-light);
+    margin: 32px 0;
+}
+
+.login-copyright {
+    font-size: 14px;
+    color: var(--gray);
+    text-align: center;
+}
+
+.login-right h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.login-right p {
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 40px;
+}

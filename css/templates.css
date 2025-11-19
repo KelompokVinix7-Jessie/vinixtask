@@ -1,0 +1,268 @@
+/* Task Templates - Simplified */
+.templates-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Upgrade Prompt Section - Yellow Box */
+.upgrade-prompt {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    color: #92400e;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+    border: 1px solid #fcd34d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.upgrade-content {
+    flex: 1;
+    text-align: left;
+}
+
+.upgrade-prompt h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.upgrade-prompt h2 i {
+    color: var(--warning);
+}
+
+.upgrade-prompt p {
+    font-size: 14px;
+    margin-bottom: 0;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.btn-premium {
+    background: linear-gradient(135deg, var(--warning) 0%, #d97706 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.6);
+}
+
+/* Templates Grid - All templates in boxes */
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.template-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-light);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Template Card Unlocked - dengan animasi hover */
+.template-card:not(.locked):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary);
+}
+
+/* Template Card Locked State - tanpa animasi */
+.template-card.locked {
+    background-color: #f8f9fa;
+    border-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.template-card.locked .template-content {
+    opacity: 0.7;
+}
+
+/* Lock Icon di pojok kanan atas */
+.template-card.locked::after {
+    content: "🔒";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    color: #6c757d;
+    z-index: 2;
+}
+
+.template-content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.template-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.template-card.locked .template-icon {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+.template-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.template-card.locked h4 {
+    color: #6c757d;
+}
+
+.template-card p {
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.template-card.locked p {
+    color: #868e96;
+}
+
+/* Tombol Download Memanjang */
+.full-width-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    margin-top: auto;
+}
+
+/* VIP Status Banner */
+.vip-status-banner {
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(79, 70, 229, 0.1) 100%);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    margin-top: 40px;
+    border: 1px solid var(--primary);
+}
+
+.vip-badge-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--warning);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.vip-status-banner p {
+    color: var(--secondary);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Style untuk tombol disabled */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-outline:disabled {
+    background-color: transparent;
+    border-color: #e9ecef;
+    color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .templates-container {
+        padding: 16px;
+    }
+    
+    .templates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 16px;
+    }
+    
+    .upgrade-prompt {
+        padding: 20px;
+        margin-bottom: 24px;
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .upgrade-content {
+        text-align: center;
+    }
+    
+    .upgrade-prompt h2 {
+        justify-content: center;
+    }
+    
+    .template-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .templates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .upgrade-prompt {
+        padding: 16px;
+    }
+    
+    .btn-premium {
+        width: 100%;
+        justify-content: center;
+    }
+}
